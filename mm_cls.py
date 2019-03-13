@@ -17,7 +17,11 @@ class Markov_Chain:
         for i in range(len(str_chrome)-1):
             inside_val += self.inside_mat[str_chrome[i], str_chrome[i+1]]
             outside_val += self.outside_mat[str_chrome[i], str_chrome[i+1]]
-        return str(inside_val - outside_val)+'\n'
+        result = inside_val - outside_val
+        if result > 0:
+            return str(result)+'  inside\n'
+        else:
+            return str(result)+'  outside\n'
 
 
 if __name__ == "__main__":
