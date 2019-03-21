@@ -25,7 +25,7 @@ def translate(chrome_str):
             chrome_list.append(2)
         elif c == 'T':
             chrome_list.append(3)
-        print(chrome_list)
+        #print(chrome_list)
     return chrome_list
 
 # read test file

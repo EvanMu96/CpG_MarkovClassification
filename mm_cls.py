@@ -46,5 +46,9 @@ if __name__ == "__main__":
     for case in test_cases:
         test_result.append(model.predict(case))
     # write the result to the file
-    outf = open('result_{}.txt'.format(test_file[0:-4]), 'x')
+    outf = open('result_{}.txt'.format(test_file[0:-4]), 'w')
     outf.writelines(test_result)
+    # print to stdio
+    for line in test_result:
+        print(line)
+    print('The results are writen into ./result{}.txt'.format(test_file[0:-4]))
